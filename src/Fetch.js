@@ -1,7 +1,8 @@
 export class Fetch {
   static #url = "http://localhost:5271/";
 
-  static async MakeFootballBets() {
+  static async MakeFootballBets(countEl) {
+    countEl.textContent = "loading...";
     const endpoint = "api/football";
     const url = this.#url + endpoint;
 

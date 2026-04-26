@@ -33,7 +33,7 @@ const MakeData = (data, el) => {
   count.textContent = matches.length;
 };
 footballEl.addEventListener("click", onClickUl);
-Fetch.MakeFootballBets().then((res) => {
+Fetch.MakeFootballBets(count).then((res) => {
   matches = res.result;
   MakeData(matches, footballEl);
 });
