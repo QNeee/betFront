@@ -13,10 +13,7 @@ const onClickUl = (e) => {
   matches = matches.filter((m) => m.id !== id);
   MakeData(matches, footballEl);
   MakeData(prevMatch, lastElem);
-  window.open(
-    `https://www.google.com/search?q=${encodeURIComponent(item.versus)}`,
-    "_blank",
-  );
+  window.open("https://betking.com.ua/sports-book/", "_blank");
 };
 const MakeItem = (item) => {
   return `
