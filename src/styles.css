@@ -1,0 +1,72 @@
+/* Загальний фон */
+body {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+}
+#football ul,
+#lastElem ul {
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border-radius: 14px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+#lastElem ul {
+  margin-left: 50px;
+}
+#football ul:hover,
+#lastElem ul:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+#football li,
+#lastElem li {
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+#football li:first-child,
+#lastElem li:first-child {
+  font-size: 15px;
+  color: #94a3b8;
+}
+
+#football li:nth-child(2),
+#lastElem li:nth-child(2) {
+  font-size: 16px;
+  color: #cbd5f5;
+}
+
+#football li:nth-child(3),
+#lastElem li:nth-child(3) {
+  font-weight: bold;
+}
+
+#football li:nth-child(4),
+#lastElem li:nth-child(4) {
+  color: #22c55e;
+  font-weight: bold;
+}
