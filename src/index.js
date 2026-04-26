@@ -15,7 +15,6 @@ const onClickUl = (e) => {
   MakeData(matches, footballEl);
   MakeData(prevMatch, lastElem);
   count.textContent = matches.length;
-  window.open("https://betking.com.ua/sports-book/", "_blank");
 };
 const MakeItem = (item) => {
   return `
