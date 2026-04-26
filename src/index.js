@@ -1,6 +1,7 @@
 import { Fetch } from "./Fetch.js";
 const footballEl = document.getElementById("football");
 const lastElem = document.getElementById("lastElem");
+const count = document.getElementById("count");
 let matches;
 let prevMatch;
 const onClickUl = (e) => {
@@ -13,6 +14,7 @@ const onClickUl = (e) => {
   matches = matches.filter((m) => m.id !== id);
   MakeData(matches, footballEl);
   MakeData(prevMatch, lastElem);
+  count.textContent = matches.length;
   window.open("https://betking.com.ua/sports-book/", "_blank");
 };
 const MakeItem = (item) => {
@@ -28,6 +30,7 @@ const MakeItem = (item) => {
 const MakeData = (data, el) => {
   const drawData = data.map((it) => MakeItem(it)).join("");
   el.innerHTML = drawData;
+  count.textContent = matches.length;
 };
 footballEl.addEventListener("click", onClickUl);
 Fetch.MakeFootballBets().then((res) => {
