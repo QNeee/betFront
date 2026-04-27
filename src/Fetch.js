@@ -1,10 +1,11 @@
 export class Fetch {
   static #url = "http://localhost:5271/";
 
-  static async MakeFootballBets(countEl) {
+  static async MakeFootballBets(countEl, date) {
+    const formattedDate = date.toISOString();
     countEl.textContent = "loading...";
     const endpoint = "api/football";
-    const url = this.#url + endpoint;
+    const url = this.#url + endpoint + `?date=${formattedDate}`;
 
     const res = await fetch(url);
 
