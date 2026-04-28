@@ -76,25 +76,8 @@ h1 {
   background: rgba(255, 255, 255, 0.03);
 }
 
-#football li:first-child,
-#lastElem li:first-child {
-  font-size: 15px;
-  color: #94a3b8;
-}
-
-#football li:nth-child(2),
-#lastElem li:nth-child(2) {
+.country {
   font-size: 16px;
-  color: #cbd5f5;
-}
-
-#football li:nth-child(3),
-#lastElem li:nth-child(3) {
-  font-weight: bold;
-}
-
-#football li:nth-child(3),
-#lastElem li:nth-child(3) {
   color: #22c55e;
   font-weight: bold;
 }

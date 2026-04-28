@@ -7,28 +7,31 @@ let prevMatch;
 const onClickUl = (e) => {
   const ul = e.target.closest(".match");
   if (!ul) return;
-
   const id = Number(ul.id);
-  const item = matches.find((it) => it.id === id);
+  const item = matches[id];
+  delete matches[id];
   prevMatch = [item];
-  matches = matches.filter((m) => m.id !== id);
   MakeData(matches, footballEl);
   MakeData(prevMatch, lastElem);
-  count.textContent = matches.length;
-};
-const MakeItem = (item) => {
-  return `
-    <ul class="match" id="${item.id}">
-      <li class="country">${item.country}</li>
-      <li class="league">${item.league}</li>
-      <li class="winner">${item.winner}</li>
-    </ul>
-  `;
+  count.textContent = Object.values(matches).length;
+  window.open(
+    `https://betking.com.ua/sports-book/?page=championship&championshipIds=${id}`,
+    "_blank",
+  );
 };
 const MakeData = (data, el) => {
-  const drawData = data.map((it) => MakeItem(it)).join("");
-  el.innerHTML = drawData;
-  count.textContent = matches.length;
+  const html = Object.entries(data)
+    .map(
+      ([leagueId, teams]) => `
+      <ul class="match" id=${leagueId}>
+        ${teams.map((t) => `<li class="country">${t}</li>`).join("")}
+      </ul>
+  `,
+    )
+    .join("");
+
+  el.innerHTML = html;
+  count.textContent = Object.values(matches).length;
 };
 footballEl.addEventListener("click", onClickUl);
 Fetch.MakeFootballBets(count, new Date()).then((res) => {
