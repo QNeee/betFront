@@ -93,8 +93,8 @@ h1 {
   font-weight: bold;
 }
 
-#football li:nth-child(4),
-#lastElem li:nth-child(4) {
+#football li:nth-child(3),
+#lastElem li:nth-child(3) {
   color: #22c55e;
   font-weight: bold;
 }

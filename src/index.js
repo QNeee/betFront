@@ -21,7 +21,6 @@ const MakeItem = (item) => {
     <ul class="match" id="${item.id}">
       <li class="country">${item.country}</li>
       <li class="league">${item.league}</li>
-      <li class="versus">${item.versus}</li>
       <li class="winner">${item.winner}</li>
     </ul>
   `;

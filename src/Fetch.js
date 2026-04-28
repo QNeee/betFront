@@ -1,6 +1,6 @@
 export class Fetch {
   static #url = "http://localhost:5271/";
-  static #hourOffset = 1;
+  static #hourOffset = 8;
   static async MakeFootballBets(countEl, date) {
     try {
       const formattedDate = date.toISOString();
